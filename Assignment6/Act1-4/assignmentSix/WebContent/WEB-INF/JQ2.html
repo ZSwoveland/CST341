@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>CST-341 jQuery Activity 2</title>
+<script src="https://code.jquery.com/jquery-3.2.1.min.js">
+var User = {
+		
+	firstName:"Zach", lastName:"S", age:"20"
+};
+function displayUser(){
+	$("#fn").html(User.firstName);
+	$("#users").find("#ln").html(User.lastName);
+	$("#users").find("#age").html(User.age);
+}
+$(document).ready(displayUser);
+</script>
+
+</head>
+<body>
+<table width=50%, border=1, id=users>
+<thead width=33%>
+<tr>
+	<th>First Name</th>
+	<th>Last Name</th>
+	<th>Age</th>
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td id="fn'">?</td>
+<td id="ln">?</td>
+<td id="age">?</td>
+</tr>
+
+</tbody>
+
+
+
+
+</table>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>CST-341 jQuery Activity 2</title>
+<script src="https://code.jquery.com/jquery-3.2.1.min.js">
+User user = {
+		
+	String firstName, String lastName, int age
+};
+
+User user = new User();
+
+user.firstName = "Zach";
+user.lastName = "S";
+user.age = "20";
+
+function clicked(){
+	alert();
+};
+
+$("#0_0").bind('click',clicked);
+
+function displayUser(){
+	$("#fn").html(user.firstName);
+	$("#users").find("#ln").html(user.lastName);
+	$("#users").find("#age").html(user.age);
+	var x = 0;
+	var y = 0;
+	var table = document.getElementVyId("users");
+	for(var user of users){
+		var row = table.insertRow(-1);
+		row.setAttribute("align","center");
+		var cell1 = row.insertCell();
+		var cell2 = row.insertCell();
+		var cell3 = row.insertCell();
+		row.id = x;
+		cell1.id = x + "_" + y++;
+		cell2.id = x + "_" + y++;
+		cell3.id = x + "_" + y++;
+		++x;
+		y=0;
+		
+		x = 0;
+		y = 0;
+		for(var user of users){
+			$("#" +x+"_"+y++).html(user.firstName);
+			$("#" +x+"_"+y++).html(user.lastName);
+			$("#" +x+"_"+y++).html(user.age);
+			++x;
+			y=0;
+		}
+		
+	}
+	
+};
+$(document).ready(displayUsers);
+</script>
+
+</head>
+<body>
+<table width=50%, border=1, id=users>
+<thead width=33% , CSS:style="background-color:#A0A0A0">
+<tr>
+	<th>First Name</th>
+	<th>Last Name</th>
+	<th>Age</th>
+</tr>
+
+</thead>
+<tbody>
+
+
+</tbody>
+
+
+
+
+</table>
+</body>
+</html>
