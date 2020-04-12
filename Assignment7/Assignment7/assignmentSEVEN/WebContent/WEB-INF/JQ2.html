@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>CST-341 jQuery</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.min.js">
+var User = {
+		
+	firstName:"Zach", lastName:"S", age:"20"
+};
+function displayUser(){
+	$("#fn").html(User.firstName);
+	$("#users").find("#ln").html(User.lastName);
+	$("#users").find("#age").html(User.age);
+}
+$(document).ready(displayUser);
+</script>
+
+</head>
+<body>
+        <nav class="navbar navbar-expand-md navbar-light bg-light">
+    <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+        <div class="navbar-nav">
+            <a href="JqueryPage.html" class="nav-item nav-link active">Home</a>
+            <a href="JqueryPage3.html" class="nav-item nav-link">Display Orders</a>
+            <a href="JqueryPage4.html" class="nav-item nav-link">Test1</a>
+            <a href="JQ2.html" class="nav-item nav-link" tabindex="-1">Test2</a>
+        </div>
+
+    </div>
+</nav>
+
+
+ <div class="form">
+    <form action="/examples/actions/confirmation.php" method="post">
+        <div class="form-group">
+            <label for="inputFirstName">First Name</label>
+            <input type="FirstName" class="form-control" id="inputFirstName" placeholder="Firstname" required>
+        </div>
+        <div class="form-group">
+            <label for="inputLastName">Last Name</label>
+            <input type="lastName" class="form-control" id="inputLastName" placeholder="LastName" required>
+        </div>
+        <div class="form-group">
+            <label for="inputAge">Age</label>
+            <input type="age" class="form-control" id="inputAge" placeholder="Age" required>
+        </div>
+     
+        
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>   
+
+ <div class="table-responsive"> 
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Row</th>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Age</th>
+                 
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td id="fn'">?</td>
+					<td id="ln">?</td>
+					<td id="age">?</td>
+                </tr>
+                
+            </tbody>
+        </table>
+    </div>    
+
+
+
+
+
+</table>
+</body>
+</html>

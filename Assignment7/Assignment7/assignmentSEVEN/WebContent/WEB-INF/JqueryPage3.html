@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>CST-341 jQuery</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.min.js">
+User user = {
+		
+	String firstName, String lastName, int age
+};
+
+User user = new User();
+
+user.firstName = "Zach";
+user.lastName = "S";
+user.age = "20";
+function displayUser(){
+	$("#fn").html(user.firstName);
+	$("#users").find("#ln").html(user.lastName);
+	$("#users").find("#age").html(user.age);
+	var x = 0;
+	var y = 0;
+	var table = document.getElementVyId("users");
+	for(var user of users){
+		var row = table.insertRow(-1);
+		row.setAttribute("align","center");
+		var cell1 = row.insertCell();
+		var cell2 = row.insertCell();
+		var cell3 = row.insertCell();
+		row.id = x;
+		cell1.id = x + "_" + y++;
+		cell2.id = x + "_" + y++;
+		cell3.id = x + "_" + y++;
+		++x;
+		y=0;
+		
+		x = 0;
+		y = 0;
+		for(var user of users){
+			$("#" +x+"_"+y++).html(user.firstName);
+			$("#" +x+"_"+y++).html(user.lastName);
+			$("#" +x+"_"+y++).html(user.age);
+			++x;
+			y=0;
+		}
+		
+	}
+	
+}
+$(document).ready(displayUsers);
+</script>
+
+</head>
+<body>
+<table width=50%, border=1, id=users>
+<thead width=33%>
+<tr>
+	<th>First Name</th>
+	<th>Last Name</th>
+	<th>Age</th>
+</tr>
+
+</thead>
+<tbody>
+
+
+</tbody>
+
+
+
+
+</table>
+</body>
+</html>
